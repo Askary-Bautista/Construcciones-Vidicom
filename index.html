@@ -211,19 +211,30 @@
           <p><strong>Celular:</strong> 756 118 49 90</p>
         </div>
 
+
+      <input
+        type="hidden"
+        name="_next"
+        value="https://construcciones-vidicom.vercel.app/gracias.html">
+
+        
        <form action="https://formsubmit.co/askarybautista@gmail.com" method="POST">
-        <input type="text" name="nombre" placeholder="Nombre" aria-label="Nombre" required />
 
-        <input type="email" name="correo" placeholder="Correo" aria-label="Correo electrónico" required />
+          <input type="text" name="nombre" required>
+          <input type="email" name="correo" required>
+          <textarea name="mensaje" required></textarea>
 
-        <textarea name="mensaje" placeholder="Mensaje" aria-label="Mensaje" required></textarea>
+          <input type="hidden" name="_subject" value="Nueva solicitud desde Vidicom">
+          <input type="hidden" name="_captcha" value="false">
 
-        <input type="hidden" name="_subject" value="Nueva solicitud desde Construcciones Vidicom">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
+          <input
+            type="hidden"
+            name="_next"
+            value="https://construcciones-vidicom.vercel.app/api/gracias.html">
 
-        <button type="submit" class="btn">Enviar mensaje</button>
-      </form>
+          <button type="submit">Enviar</button>
+
+        </form>
       </div>
     </section>
   </main>
