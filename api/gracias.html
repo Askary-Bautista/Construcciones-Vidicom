@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mensaje enviado | Construcciones Vidicom</title>
+
+    <meta http-equiv="refresh" content="3;url=/" />
+
+    <style>
+        :root {
+            --dark: #1d1d1d;
+            --white: #ffffff;
+            --green-light: #f8f9ee;
+            --blue-muted: #8d94a4;
+            --orange-pastel: #fbae8a;
+            --orange-muted: #e6cf92;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(
+                135deg,
+                var(--green-light),
+                #ffffff
+            );
+            color: var(--dark);
+        }
+
+        .success-card {
+            width: min(90%, 600px);
+            background: white;
+            padding: 50px;
+            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,.12);
+            border-top: 8px solid var(--orange-pastel);
+        }
+
+        .icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background: var(--orange-muted);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 42px;
+            font-weight: bold;
+            color: var(--dark);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .redirect {
+            margin-top: 25px;
+            color: var(--blue-muted);
+            font-weight: 700;
+        }
+
+        .loader {
+            width: 100%;
+            height: 6px;
+            background: #eee;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 25px;
+        }
+
+        .loader span {
+            display: block;
+            height: 100%;
+            background: var(--orange-pastel);
+            animation: loading 3s linear forwards;
+        }
+
+        @keyframes loading {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .success-card {
+                padding: 35px 25px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="success-card">
+
+        <div class="icon">✓</div>
+
+        <h1>Mensaje enviado correctamente</h1>
+
+        <p>
+            Gracias por contactar a <strong>Construcciones Vidicom</strong>.
+        </p>
+
+        <p>
+            Hemos recibido tu solicitud y nos pondremos en contacto contigo
+            a la brevedad posible.
+        </p>
+
+        <div class="loader">
+            <span></span>
+        </div>
+
+        <p class="redirect">
+            Serás redirigido automáticamente al sitio principal en unos segundos...
+        </p>
+
+    </div>
+
+</body>
+</html>
