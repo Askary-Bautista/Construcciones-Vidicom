@@ -212,11 +212,11 @@
         </div>
 
        <form action="/api/enviar" method="POST">
-        <input type="text" name="nombre" placeholder="Nombre" required>
-        <input type="email" name="correo" placeholder="Correo electrónico" required>
-        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-        <button type="submit" class="btn">Enviar mensaje</button>
-      </form>
+          <input type="text" name="nombre" placeholder="Nombre" aria-label="Nombre" required />
+          <input type="email" name="correo" placeholder="Correo" aria-label="Correo electrónico" required />
+          <textarea name="mensaje" placeholder="Mensaje" aria-label="Mensaje" required></textarea>
+          <button type="submit" class="btn">Enviar mensaje</button>
+        </form>
       </div>
     </section>
   </main>

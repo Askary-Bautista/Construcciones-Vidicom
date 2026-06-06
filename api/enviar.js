@@ -21,18 +21,24 @@ module.exports = async function handler(req, res) {
     },
   });
 
-  await transporter.sendMail({
-    from: `"Sitio Web VIDICOM" <${process.env.EMAIL_USER}>`,
-    to: process.env.EMAIL_USER,
-    replyTo: correo,
-    subject: "Nueva solicitud desde Construcciones Vidicom",
-    html: `
-      <h2>Nueva solicitud de contacto</h2>
-      <p><strong>Nombre:</strong> ${nombre}</p>
-      <p><strong>Correo:</strong> ${correo}</p>
-      <p><strong>Mensaje:</strong><br>${mensaje}</p>
-    `,
-  });
+  try {
+    await transporter.sendMail({
+      from: `"Construcciones Vidicom" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER,
+      replyTo: correo,
+      subject: "Nueva solicitud desde la página web",
+      html: `
+        <h2>Nueva solicitud de contacto</h2>
+        <p><strong>Nombre:</strong> ${nombre}</p>
+        <p><strong>Correo:</strong> ${correo}</p>
+        <p><strong>Mensaje:</strong></p>
+        <p>${mensaje}</p>
+      `,
+    });
 
-  return res.redirect(303, "/api/gracias.html");
+    return res.redirect(303, "/gracias.html");
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send("Error al enviar el mensaje");
+  }
 };
