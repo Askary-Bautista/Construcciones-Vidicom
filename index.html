@@ -237,14 +237,20 @@
             required
           ></textarea>
 
-          <input type="hidden" name="_subject" value="Nueva solicitud desde Vidicom" />
+          <input type="hidden" name="_subject" value="Nueva solicitud desde Construcciones Vidicom" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
 
           <input
             type="hidden"
+            name="_autoresponse"
+            value="Gracias por contactar a Construcciones Vidicom. Hemos recibido su solicitud y nos comunicaremos con usted a la brevedad."
+          />
+
+          <input
+            type="hidden"
             name="_next"
-            value="https://construcciones-vidicom.vercel.app/api/gracias.html"
+            value="https://construcciones-vidicom.vercel.app/gracias.html"
           />
 
           <button type="submit" class="btn">Enviar mensaje</button>
